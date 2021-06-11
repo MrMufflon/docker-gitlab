@@ -1,15 +1,15 @@
 web:
   image: 'gitlab/gitlab-ee:latest'
   restart: always
-  hostname: 'gitlab.example.com'
+  hostname: 'pluto'
   environment:
     GITLAB_OMNIBUS_CONFIG: |
       external_url 'https://gitlab.example.com'
       # Add any other gitlab.rb configuration here, each on its own line
   ports:
-    - '80:80'
-    - '443:443'
-    - '22:22'
+    - '180:80'
+    - '1443:443'
+    - '122:22'
   volumes:
     - gitlab-config:/etc/gitlab
     - gitlab-logs:/var/log/gitlab
